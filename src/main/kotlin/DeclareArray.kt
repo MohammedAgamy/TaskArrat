@@ -62,7 +62,6 @@ fun mutableList() {
 
 }
 
-
 fun operators() {
     //Use the map operator to create a new list from the array where each value is multiplied by 2. Print the new list.
     val numbers = arrayOf(1, 2, 3, 4, 5).map { it * 2 }
