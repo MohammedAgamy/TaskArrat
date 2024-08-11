@@ -1,73 +1,116 @@
 ///Create an Array:
 fun arrayOne() {
+
+    // Declare an array of integers with the values [1, 2, 3, 4, 5].
     val arrayOfNumber = arrayOf(1, 2, 3, 4, 5)
+    // Use a loop to iterate through the array and print each value using withIndex.
     for (index in arrayOfNumber.indices) {
         //print value used index
         println(arrayOfNumber[index])
     }
-
     // another way to print value with index
     for ((index, value) in arrayOfNumber.withIndex()) {
         println("The element at $index is $value")
     }
 
+    //Reverse the array and print the reversed array.  
     println("Array reversed ${arrayOfNumber.reversedArray().joinToString()}")
+
+
+    //Use the filter function to create a new list from the array that contains only even numbers. Print the new list.
+    val filterList = arrayOfNumber.filter { it % 2 == 0 }
+    println("even number = $filterList")
 
 }
 
-fun  immutableList(){
+
+fun immutableList() {
+
+    // Declare an immutable list of strings with the values ["apple", "banana", "cherry"].
     val listOf = listOf("apple", "banana", "cherry")
-   // used indices
+    // Use a loop to iterate through the list and print each value using indices.
     for (index in listOf.indices)
         println(listOf[index])
 
-    //contains
+    //Use the contains operator to check if the list contains the element "banana" and print the result.
     val contains = listOf.contains("banana")
-    println(contains)
+    println("list contains a  $contains")
 
-    //convert to upper case
+    //Convert the list to uppercase and print the modified list.  
     val listUpperCase = listOf.toString().uppercase()
-    println(listUpperCase)
+    println("convert to upper case $listUpperCase")
 
 }
 
-fun mutableList()
-{
+fun mutableList() {
+
+    //Declare a mutable list of doubles with the values [1.1, 2.2, 3.3].
     val mutableOfDoubleList = mutableListOf(1.1, 2.2, 3.3)
+    //Add the value 4.4 to the mutable list.
     mutableOfDoubleList.add(4.4)
+    //Remove the value 2.2 from the mutable list.
     mutableOfDoubleList.remove(2.2)
-
-
-    mutableOfDoubleList.forEach {action ->
-        println(action)
+    //Use a loop to iterate through the mutable list and print each value with for each.
+    mutableOfDoubleList.forEach { action ->
+        println("Double of mutable list = $action")
     }
 
-
+    //Sort the mutable list in ascending order and print the sorted list.  
     val sortedArray = mutableOfDoubleList.sorted()
-    println(sortedArray.joinToString() )
+    println(" array after sort ${sortedArray.joinToString()}")
 
 
 }
 
 
-fun map()
-{
-    val numbers = arrayOf(1, 2, 3, 4, 5)
-    val mult = numbers.map { it * 2 }
-    println(mult)
-
+fun operators() {
+    //Use the map operator to create a new list from the array where each value is multiplied by 2. Print the new list.
+    val numbers = arrayOf(1, 2, 3, 4, 5).map { it * 2 }
+    println("multiplied list = $numbers")
+    // Use the filter operator to create a new list from the original list of strings that only contains strings with more than 5 characters. Print the new list.
     val words = listOf("Kotlin", "is", "a", "great", "language", "to", "learn")
-
     val longWords = words.filter { it.length > 5 }
-    println(longWords)
+    println("longWord = $longWords")
 
+    // Use the any function to check if there is any element in the list of strings that starts with 'a'. Print the result.
+    val any = words.any { it.first() == 'a' }
+    println("any words starts with a = $any")
+
+    //Use the forEach loop to iterate through the modified mutable list of doubles and print each value squared.  
     val numbersOf = mutableListOf(1.5, 2.0, 3.7, 4.2)
     numbersOf.forEach { number ->
         val squared = number * number
-        println(squared)
+        println(" result of squared = $squared")
     }
-
 
 
 }
 
+
+fun  additionalFunctions()
+{
+    val numbersOf = mutableListOf(1.5, 2.0, 3.7, 4.2)
+    //Use the none function to check if none of the elements in the array are negative. Print the result. 
+    val nonNegative = numbersOf.none {
+        it < 0
+    }
+    println("Non Negative = $nonNegative")
+
+    // Use the all function to check if all the elements in the mutable list are greater than 1. Print the result. 
+    val greaterThan = numbersOf.all {
+        it > 1
+    }
+    println("Number greater than 1 = $greaterThan")
+
+    //Use the find function to find the first element in the array that is greater than 3. Print the result.
+    val checkFirst = numbersOf.find {
+        it > 3
+    }
+    println("First is greater than 3 = $checkFirst")
+
+
+    //Use the filter function to create a new list from the array that contains only even numbers. Print the new list.
+    // convert it from Double to int to use condition
+    val filterList = numbersOf.filter { it.toInt() % 2 == 0 }
+    println("even number = $filterList")
+}
