@@ -13,7 +13,7 @@ This project includes several Kotlin functions that perform common operations on
 ### Array Operations
 
 
-   ```ruby
+   ```kotlin
    fun arrayOne() {
 
     // Declare an array of integers with the values [1, 2, 3, 4, 5].
@@ -48,7 +48,7 @@ This project includes several Kotlin functions that perform common operations on
 
 ### Immutable List Operations
 
-   ```ruby
+   ```kotlin
   fun immutableList() {
 
     // Declare an immutable list of strings with the values ["apple", "banana", "cherry"].
@@ -76,7 +76,7 @@ This project includes several Kotlin functions that perform common operations on
 
 ### Mutable List Operations
 
-   ```ruby
+   ```kotlin
  
 
 fun mutableList() {
@@ -109,7 +109,7 @@ fun mutableList() {
 
   ### operators
 
-   ```ruby
+   ```kotlin
  
 fun operators() {
     //Use the map operator to create a new list from the array where each value is multiplied by 2. Print the new list.
@@ -144,7 +144,7 @@ fun operators() {
 
   ### additionalFunctions
 
-   ```ruby
+   ```kotlin
 
 fun  additionalFunctions()
 {
@@ -181,7 +181,7 @@ fun  additionalFunctions()
 
   ## Call in Main 
   
-  ```ruby
+  ```kotlin
 
 fun main(args: Array<String>) {
 
